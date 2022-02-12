@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:text="-"
+        android:id="@+id/btnAmountLess"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/etAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center" />
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:id="@+id/btnAmountPlus"
+        android:text="+"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btnAmountAdd"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:text="Agregar"/>
+
+
+</LinearLayout>

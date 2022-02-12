@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/menuSell"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        app:showAsAction="always"
+        android:title="Vender" />
+
+    <item
+        android:id="@+id/menuAdd"
+        android:title="Agregar Producto" />
+    <item
+        android:id="@+id/menuInfo"
+        android:title="Informacion" />
+    <item
+        android:id="@+id/menuBill"
+        android:title="Ventas y Facturas" />
+</menu>
