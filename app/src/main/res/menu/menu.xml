@@ -5,7 +5,7 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/menuSell"
-        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:icon="@drawable/ic_baseline_payment_24"
         app:showAsAction="always"
         android:title="Vender" />
 
@@ -13,9 +13,9 @@
         android:id="@+id/menuAdd"
         android:title="Agregar Producto" />
     <item
-        android:id="@+id/menuInfo"
-        android:title="Informacion" />
-    <item
         android:id="@+id/menuBill"
         android:title="Ventas y Facturas" />
+    <item
+        android:id="@+id/menuInfo"
+        android:title="Informacion" />
 </menu>

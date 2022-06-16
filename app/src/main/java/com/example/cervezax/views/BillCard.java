@@ -19,6 +19,7 @@ import com.example.cervezax.database.entity.Bill;
 import com.example.cervezax.database.entity.Product;
 import com.example.cervezax.threads.controllers.ImageController;
 
+import java.text.DecimalFormat;
 import java.util.Hashtable;
 
 

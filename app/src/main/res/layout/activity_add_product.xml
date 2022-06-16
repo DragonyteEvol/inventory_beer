@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <include layout="@layout/tool_bar"
@@ -13,207 +16,233 @@
         android:orientation="vertical"
         android:layout_margin="15dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Agregar Producto"
-        android:layout_marginVertical="25dp"
-        android:textColor="#000000"
-        android:textSize="34sp" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:stretchColumns="*"
-        android:background="@color/white"
-        android:layout_height="match_parent">
-
-        <TableRow
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nombre:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:typeface="normal" />
-
-            <EditText
-                android:id="@+id/etAddName"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:background="#C4C4C4"
-                android:inputType="textPersonName" />
-        </TableRow>
+                android:orientation="vertical" >
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="25dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="AGREGAR PRODUCTO"
+                    android:textColor="#ff608f"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Presentación:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:typeface="normal" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginBottom="25sp"
+                    android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/etAddPresentation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#c4c4c4"
-                android:ems="10"
-                android:inputType="textPersonName" />
-        </TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOMBRE"
+                        android:textSize="12sp"
+                        android:typeface="normal" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_height="match_parent" >
+                    <EditText
+                        android:id="@+id/etAddName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_edit_text"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:lines="@integer/google_play_services_version"
+                        android:singleLine="false" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Contenido:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:typeface="normal" />
+                </LinearLayout>
 
-            <EditText
-                android:id="@+id/etAddContent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#c4c4c4"
-                android:ems="10"
-                android:inputType="number" />
-        </TableRow>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="vertical">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_height="match_parent" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRESENTACION"
+                        android:textSize="12sp"
+                        android:typeface="normal" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Precio de compra:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:typeface="normal" />
+                    <EditText
+                        android:id="@+id/etAddPresentation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_edit_text"
+                        android:ems="10"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
 
-            <EditText
-                android:id="@+id/etAddPriceBuy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#c4c4c4"
-                android:ems="10"
-                android:inputType="number" />
-        </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_height="match_parent" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Precio de venta:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:typeface="normal" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CANTIDAD DISPONIBLE"
+                        android:textSize="12sp" />
 
-            <EditText
-                android:id="@+id/etAddPriceSell"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#c4c4c4"
-                android:ems="10"
-                android:inputType="number" />
-        </TableRow>
+                    <EditText
+                        android:id="@+id/etAddStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_edit_text"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_height="match_parent" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UID:"
-                android:textColor="#000000"
-                android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRECIO VENTA"
+                        android:textSize="12sp"
+                        android:typeface="normal" />
 
-            <EditText
-                android:id="@+id/etAddUid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#c4c4c4"
-                android:ems="10"
-                android:inputType="number" />
-        </TableRow>
+                    <EditText
+                        android:id="@+id/etAddPriceSell"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_edit_text"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_height="match_parent" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cantidad disponible:"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRECIO COMPRA"
+                        android:textSize="12sp"
+                        android:typeface="normal" />
 
-            <EditText
-                android:id="@+id/etAddStock"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#c4c4c4"
-                android:ems="10"
-                android:inputType="number" />
-        </TableRow>
+                    <EditText
+                        android:id="@+id/etAddPriceBuy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_edit_text"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:layout_height="match_parent" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Imagen:"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UID"
+                        android:textSize="12sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:id="@+id/imgAdd"
-                android:layout_height="300dp"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:background="#c4c4c4" />
-        </TableRow>
+                    <EditText
+                        android:id="@+id/etAddUid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_edit_text"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_marginVertical="5dp"
-            android:gravity="center"
-            android:layout_height="match_parent" >
 
-            <Button
-                android:id="@+id/btnAddSave"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Guardar" />
-        </TableRow>
-    </TableLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CONTENIDO"
+                        android:textSize="12sp"
+                        android:typeface="normal" />
+
+                    <EditText
+                        android:id="@+id/etAddContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shadow_edit_text"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="12sp"
+                        android:text="IMAGEN"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imgAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/ic_baseline_image_not_supported_24"
+                        android:cropToPadding="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12sp"
+                    android:layout_marginVertical="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnAddSave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_button"
+                        android:text="Guardar"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
 
 
     </LinearLayout>

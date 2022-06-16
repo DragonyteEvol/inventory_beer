@@ -16,6 +16,7 @@ import com.example.cervezax.repositories.BillImplement;
 import com.example.cervezax.views.BillCard;
 import com.example.cervezax.views.ProductCard;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class BillModel {
@@ -95,7 +96,15 @@ public class BillModel {
         @Override
         protected void onPostExecute(Integer integer) {
             super.onPostExecute(integer);
-            finalSell.setText(String.valueOf(integer));
+            try{
+                String patron = "###,###.##";
+                DecimalFormat objDF= new DecimalFormat(patron);
+                String money= objDF.format(integer);
+                System.out.println(money);
+                finalSell.setText(money);
+            }catch (Exception e ){
+                Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+            }
         }
     }
 }

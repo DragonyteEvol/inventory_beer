@@ -27,7 +27,7 @@ public class ImageController {
 
         public Bitmap decodeImage(String currentPhotoPath){
             Bitmap imageBitmap = BitmapFactory.decodeFile(currentPhotoPath);
-            Bitmap resizedImage = Bitmap.createScaledBitmap(imageBitmap,135,100,false);
+            Bitmap resizedImage = Bitmap.createScaledBitmap(imageBitmap,500,300,false);
             return rotateImage(resizedImage,90);
         }
 
@@ -48,4 +48,5 @@ public class ImageController {
             imageView.setImageBitmap(bitmap);
         }
     }
+
 }

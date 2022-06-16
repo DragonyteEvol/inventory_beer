@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:elevation="10dp"
+    android:layout_margin="2dp"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="0.1dp"
-    android:background="@color/white"
+    android:background="@drawable/rounded"
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
@@ -12,16 +12,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
         android:orientation="horizontal"
-        android:paddingVertical="15dp">
+        >
 
         <ImageView
             android:id="@+id/imageBeer"
-            android:layout_width="100dp"
-            android:layout_height="225dp"
-            android:layout_weight="1.5"
-            android:background="#c4c4c4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded"
             android:elevation="10dp" />
 
         <LinearLayout
@@ -39,6 +37,7 @@
                 android:layout_weight="1"
                 android:autoSizeTextType="uniform"
                 android:text="Budweiser"
+                android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="34sp" />
 
@@ -51,8 +50,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    android:text="Presentacion: "
-                    android:textColor="@color/black" />
+                    android:text="PRESENTACION  "
+                    android:textAllCaps="true" />
 
                 <TextView
                     android:id="@+id/presentationBeer"
@@ -71,8 +70,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    android:text="Cantidad: "
-                    android:textColor="@color/black" />
+                    android:text=" Cantidad "
+                    android:textAllCaps="true" />
 
                 <TextView
                     android:id="@+id/contentBeer"
@@ -91,8 +90,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="5dp"
-                    android:text="Disponible: "
-                    android:textColor="@color/black" />
+                    android:text="Disponible "
+                    android:textAllCaps="true" />
 
                 <TextView
                     android:id="@+id/stockBeer"
@@ -110,15 +109,16 @@
             </LinearLayout>
 
 
-                <TextView
-                    android:id="@+id/priceBeer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="5dp"
-                    android:text="2500"
-                    android:layout_gravity="end"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/priceBeer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="2500"
+                android:textAllCaps="true"
+                android:textSize="24sp" />
 
 
         </LinearLayout>
